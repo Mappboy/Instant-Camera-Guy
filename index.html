@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Instant Camera Guy</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
     <script>
-      // This config object must be defined before the Tailwind CSS script is loaded.
       tailwind.config = {
         theme: {
           extend: {
@@ -48,23 +49,6 @@
         },
       }
     </script>
-    <!--
-      NOTE: The Tailwind CSS CDN is used for rapid development in this environment.
-      For a production deployment, it's recommended to set up a build process
-      to compile Tailwind CSS, which resolves browser warnings and optimizes performance.
-    -->
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: 'Montserrat', sans-serif;
-      }
-      .font-special {
-        font-family: 'Special Elite', cursive;
-      }
-    </style>
   <script type="importmap">
 {
   "imports": {
