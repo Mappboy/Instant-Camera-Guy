@@ -14,7 +14,7 @@ const HomePage: React.FC = () => {
   useEffect(() => {
     const fetchContent = async () => {
       setLoading(true);
-      const slugs = ['hero', 'about', 'repairs', 'photos', 'contact', 'more-to-come'];
+      const slugs = ['hero', 'about', 'photos', 'contact', 'more-to-come'];
       const promises = slugs.map(slug => contentService.getContent(slug));
       const results = await Promise.all(promises);
       const contentMap: Record<string, ContentPiece> = {};
@@ -45,6 +45,12 @@ const HomePage: React.FC = () => {
           <h1 className="text-4xl md:text-6xl font-special text-primary leading-tight">
             {content.hero.frontmatter.title}
           </h1>
+          <a 
+            href="/repair" 
+            className="mt-8 inline-block bg-accent-red text-background font-bold py-3 px-8 rounded-sm shadow-lg hover:bg-accent-red/90 transition-colors"
+          >
+            Camera Repair Services
+          </a>
         </section>
       )}
 
@@ -84,16 +90,6 @@ const HomePage: React.FC = () => {
                 <div className="prose lg:prose-lg text-left">
                     <ReactMarkdown remarkPlugins={[remarkGfm]}>{content.about.content}</ReactMarkdown>
                 </div>
-            </div>
-        </section>
-      )}
-
-      {/* Repairs Section */}
-      {content.repairs && (
-        <section id="repairs" className="scroll-mt-24 max-w-4xl mx-auto">
-            <h2 className="text-4xl font-special mb-8 text-center">{content.repairs.frontmatter.title}</h2>
-            <div className="prose lg:prose-lg mx-auto bg-background p-8 sm:p-12 shadow-lg rounded-sm border-t-8 border-accent-red">
-                 <ReactMarkdown remarkPlugins={[remarkGfm]}>{content.repairs.content}</ReactMarkdown>
             </div>
         </section>
       )}

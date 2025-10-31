@@ -17,7 +17,7 @@ Years of hands-on experience with hundreds of cameras means your beloved Polaroi
 `,
   `---
 title: "Repair, Service & Modification"
-image: "https://picsum.photos/seed/camera/800/600"
+image: "https://picsum.photos/seed/repair/800/600"
 slug: "feature-repair"
 ---
 From simple cleanings to complex electronic repairs and custom modifications, we bring your camera back to life.
@@ -31,23 +31,10 @@ Based in Australia, but we happily accept repairs from and ship cameras to anywh
 `,
   `---
 title: "About The Instant Camera Guy"
-image: "https://picsum.photos/seed/jake-profile/400/400"
+image: "https://www.datocms-assets.com/12178/1561713490-2483746215112465356118787362462414567503721o.jpg?ar64=MjAwOjIwMA&auto=format&fit=crop&fp-y=0.18&h=200&mask=ellipse&w=200"
 slug: "about"
 ---
 My name is Jake, and I'm the guy behind The Instant Camera Guy. My passion for these incredible cameras started years ago and quickly turned into an obsession with understanding how they work, and more importantly, how to fix them when they don't. I believe in preserving the magic of instant photography for generations to come.
-`,
-  `---
-title: "Repairs & Modification"
-slug: "repairs"
----
-We offer a full range of services to get your camera working perfectly.
-
-*   **General Repair:** Fixing common issues like gear failures, motor problems, and electronic faults.
-*   **SX-70 Conversion:** Convert your SX-70 to use the more common and versatile 600-type film.
-*   **New Lenses:** Replace scratched or damaged lenses to bring back sharpness.
-*   **Battery Modifications:** Modern battery solutions for older camera models.
-*   **General CLA:** A full Clean, Lubricate, and Adjust service to ensure your camera is in top shape.
-*   **Reskinning:** Replace worn or damaged leather with fresh, new skins in various colors.
 `,
     `---
 title: "More to Come"

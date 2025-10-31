@@ -3,7 +3,7 @@ import React from 'react';
 const Header: React.FC = () => {
   const navItems = [
     { name: 'About', path: '#about', color: 'text-accent-green' },
-    { name: 'Repairs', path: '#repairs', color: 'text-accent-red' },
+    { name: 'Repairs', path: '/repair', color: 'text-accent-red' },
     { name: 'Photos', path: '#photos', color: 'text-accent-tan' },
     { name: 'Contact', path: '#contact', color: 'text-accent-teal' },
   ];
@@ -13,7 +13,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
-            <a href="#" className="text-3xl font-special text-primary">
+            <a href="/" className="text-3xl font-special text-primary">
               The Instant 📷 Guy
             </a>
           </div>
