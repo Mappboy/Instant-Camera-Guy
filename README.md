@@ -1,20 +1,33 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Instant Camera Guy - 2025 Redesign
 
-# Run and deploy your AI Studio app
+This repository contains the source code for the 2025 redesign of the Instant Camera Guy website.
 
-This contains everything you need to run your app locally.
+## About
 
-View your app in AI Studio: https://ai.studio/apps/drive/1OI0d1NqCuuntdPzdNXVySuiBYuTCINAn
+The Instant Camera Guy is a passionate collector and repairer of vintage Polaroid cameras. This website serves as a portfolio of his work, a blog for sharing his knowledge, and a contact point for repair inquiries.
 
-## Run Locally
+## Running Locally
 
-**Prerequisites:**  Node.js
+**Prerequisites:**
 
+*   Node.js
+*   pnpm
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+**Instructions:**
+
+1.  Install dependencies:
+    ```bash
+    pnpm install
+    ```
+2.  Run the development server:
+    ```bash
+    pnpm dev
+    ```
+
+## Technologies Used
+
+*   **Framework:** React
+*   **Language:** TypeScript
+*   **Build Tool:** Vite
+*   **Styling:** CSS Modules
+*   **Deployment:** GitHub Pages
