@@ -1,5 +1,24 @@
 {
   "name": "The Instant 📷 Guy",
   "description": "Australia's home for Polaroid and Instant Camera Repairs. Service and modification for your favorite instant cameras.",
-  "requestFramePermissions": []
+  "requestFramePermissions": [],
+   "short_name": "T.I.📷.G",
+  "start_url": "/",
+  "display": "standalone",
+  "dir": "auto",
+  "lang": "en-AU",
+  "theme_color": "#00B140",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "assets/image/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "assets/image/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
 }

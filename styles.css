@@ -1,3 +1,5 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
 html {
   scroll-behavior: smooth;
 }
@@ -6,4 +8,89 @@ body {
 }
 .font-special {
   font-family: 'Special Elite', cursive;
+}
+
+@theme {
+  /*
+  ============================================================
+  1. Colors from your JS config
+     (Converted to r g b values for opacity support)
+  ============================================================
+  */
+  --color-background: 253 253 248; /* #FDFDF8 */
+  --color-primary: 74 65 58;        /* #4A413A */
+  --color-accent-red: 177 74 59;    /* #B14A3B */
+  --color-accent-teal: 10 95 110;   /* #0A5F6E */
+  --color-accent-tan: 214 200 167;  /* #D6C8A7 */
+  --color-accent-green: 90 110 75;  /* #5A6E4B */
+
+  /*
+  ============================================================
+  2. Colors from your old example CSS
+     (Renamed to avoid conflict with 'primary' above)
+  ============================================================
+  */
+  --color-brand-primary: 99 102 241;   /* #6366f1 */
+  --color-brand-secondary: 236 72 153; /* #ec4899 */
+
+  /*
+  ============================================================
+  3. Fonts from your JS config
+  ============================================================
+  */
+  --font-sans: 'Montserrat', sans-serif;
+  --font-special: '"Special Elite"', cursive;
+  /* Note: The 'Inter' font from your old CSS is overridden by 'Montserrat' */
+
+  /*
+  ============================================================
+  4. Typography (Prose) variables from your JS config
+  ============================================================
+  */
+  --tw-prose-body: rgb(var(--color-primary));
+  --tw-prose-headings: rgb(var(--color-primary));
+  --tw-prose-lead: rgb(var(--color-primary));
+  --tw-prose-links: rgb(var(--color-accent-teal));
+  --tw-prose-bold: rgb(var(--color-primary));
+  --tw-prose-counters: rgb(var(--color-primary));
+  --tw-prose-bullets: rgb(var(--color-primary));
+  --tw-prose-hr: rgb(var(--color-primary) / 0.1);
+  --tw-prose-quotes: rgb(var(--color-primary));
+  --tw-prose-quote-borders: rgb(var(--color-accent-tan));
+  --tw-prose-captions: rgb(var(--color-primary) / 0.8);
+  --tw-prose-code: rgb(var(--color-primary));
+  --tw-prose-pre-code: rgb(var(--color-background));
+  --tw-prose-pre-bg: rgb(var(--color-primary));
+}
+
+/*
+============================================================
+5. Dark Mode Setup
+   (This is now just standard CSS)
+============================================================
+*/
+.dark {
+  /* Dark mode values from your old example CSS */
+  --color-brand-primary: 79 70 229;   /* #4f46e5 */
+  --color-brand-secondary: 219 39 119; /* #db2777 */
+
+  /* Dark mode for your "Polaroid" theme (swapping bg/primary) */
+  --color-background: 74 65 58;  /* #4A413A */
+  --color-primary: 253 253 248; /* #FDFDF8 */
+
+  /* Dark mode for Prose */
+  --tw-prose-body: rgb(var(--color-primary));
+  --tw-prose-headings: rgb(var(--color-primary));
+  --tw-prose-lead: rgb(var(--color-primary));
+  /* --tw-prose-links: ... you may want a lighter teal */
+  --tw-prose-bold: rgb(var(--color-primary));
+  --tw-prose-counters: rgb(var(--color-primary));
+  --tw-prose-bullets: rgb(var(--color-primary));
+  --tw-prose-hr: rgb(var(--color-primary) / 0.1);
+  --tw-prose-quotes: rgb(var(--color-primary));
+  /* --tw-prose-quote-borders: ... */
+  --tw-prose-captions: rgb(var(--color-primary) / 0.8);
+  --tw-prose-code: rgb(var(--color-primary));
+  --tw-prose-pre-code: rgb(var(--color-background));
+  --tw-prose-pre-bg: rgb(var(--color-primary));
 }

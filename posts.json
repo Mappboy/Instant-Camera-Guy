@@ -1,0 +1,32 @@
+[
+  {
+    "frontmatter": {
+      "title": "My First Polaroid Photo",
+      "image": "https://picsum.photos/seed/post1/800/600",
+      "slug": "first-polaroid",
+      "category": "photography",
+      "date": "2023-10-26"
+    },
+    "content": "This is the content of my first post. I'm so excited to share my first photo taken with a vintage Polaroid camera!"
+  },
+  {
+    "frontmatter": {
+      "title": "SX-70 Camera Review",
+      "image": "https://picsum.photos/seed/post2/800/600",
+      "slug": "sx-70-review",
+      "category": "reviews",
+      "date": "2023-11-05"
+    },
+    "content": "A deep dive into the iconic Polaroid SX-70 Land Camera. Is it still worth it today? Let's find out."
+  },
+  {
+    "frontmatter": {
+      "title": "Tips for beginners",
+      "image": "https://picsum.photos/seed/post3/800/60.png",
+      "slug": "beginner-tips",
+      "category": "photography",
+      "date": "2023-11-12"
+    },
+    "content": "Some useful tips and tricks for those who are just starting their journey with instant photography."
+  }
+]

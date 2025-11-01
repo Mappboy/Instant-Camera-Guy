@@ -1,0 +1,69 @@
+[
+  {
+    "frontmatter": {
+      "title": "Australia's home for Polaroid and Instant Camera Repairs",
+      "slug": "hero"
+    },
+    "content": ""
+  },
+  {
+    "frontmatter": {
+      "title": "Experience",
+      "image": "/assets/images/experience.jpg",
+      "slug": "feature-experience"
+    },
+    "content": "Years of hands-on experience with hundreds of cameras means your beloved Polaroid is in safe hands. We've seen it all."
+  },
+  {
+    "frontmatter": {
+      "title": "Repair, Service & Modification",
+      "image": "/assets/images/camera.jpg",
+      "slug": "feature-repair"
+    },
+    "content": "From simple cleanings to complex electronic repairs and custom modifications, we bring your camera back to life."
+  },
+  {
+    "frontmatter": {
+      "title": "Worldwide Shipping",
+      "image": "/assets/images/shipping.jpg",
+      "slug": "feature-shipping"
+    },
+    "content": "Based in Australia, but we happily accept repairs from and ship cameras to anywhere in the world."
+  },
+  {
+    "frontmatter": {
+      "title": "About The Instant Camera Guy",
+      "image": "https://www.datocms-assets.com/12178/1561713490-2483746215112465356118787362462414567503721o.jpg?ar64=MjAwOjIwMA&auto=format&fit=crop&fp-y=0.18&h=200&mask=ellipse&w=200",
+      "slug": "about"
+    },
+    "content": "My name is Jake, and I'm the guy behind The Instant Camera Guy. My passion for these incredible cameras started years ago and quickly turned into an obsession with understanding how they work, and more importantly, how to fix them when they don't. I believe in preserving the magic of instant photography for generations to come."
+  },
+  {
+    "frontmatter": {
+      "title": "Repairs & Modification",
+      "slug": "repairs"
+    },
+    "content": "We offer a full range of services to get your camera working perfectly.\n\n*   **General Repair:** Fixing common issues like gear failures, motor problems, and electronic faults.\n*   **SX-70 Conversion:** Convert your SX-70 to use the more common and versatile 600-type film.\n*   **New Lenses:** Replace scratched or damaged lenses to bring back sharpness.\n*   **Battery Modifications:** Modern battery solutions for older camera models.\n*   **General CLA:** A full Clean, Lubricate, and Adjust service to ensure your camera is in top shape.\n*   **Reskinning:** Replace worn or damaged leather with fresh, new skins in various colors."
+  },
+  {
+    "frontmatter": {
+      "title": "More to Come",
+      "slug": "more-to-come"
+    },
+    "content": "We're always working on new projects, blog posts, and guides. Stay tuned for more content!"
+  },
+  {
+    "frontmatter": {
+      "title": "Photos",
+      "slug": "photos"
+    },
+    "content": "A gallery of our favorite shots and camera restorations is coming soon! Check back for inspiration."
+  },
+  {
+    "frontmatter": {
+      "title": "Contact Us",
+      "slug": "contact"
+    },
+    "content": "Get in touch to discuss your repair or ask any questions.\n\n*   **Phone:** [0431 845 455](tel:0431845455)\n*   **Email:** [theinstantcameraguy@hotmail.com](mailto:theinstantcameraguy@hotmail.com)\n*   **Facebook:** [Message us on Facebook](https://www.facebook.com/)\n*   **Gumtree:** [Visit our Gumtree Store](https://www.gumtree.com.au/)"
+  }
+]
