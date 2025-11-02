@@ -2,14 +2,15 @@
   {
     "frontmatter": {
       "title": "Australia's home for Polaroid and Instant Camera Repairs",
-      "slug": "hero"
+      "slug": "hero",
+      "heroImage": "sx_70.png"
     },
     "content": ""
   },
   {
     "frontmatter": {
       "title": "Experience",
-      "image": "/assets/images/experience.jpg",
+      "image": "undraw_camera_mg5h.svg",
       "slug": "feature-experience"
     },
     "content": "Years of hands-on experience with hundreds of cameras means your beloved Polaroid is in safe hands. We've seen it all."
@@ -17,7 +18,7 @@
   {
     "frontmatter": {
       "title": "Repair, Service & Modification",
-      "image": "/assets/images/camera.jpg",
+      "image": "repair_header_img.JPG",
       "slug": "feature-repair"
     },
     "content": "From simple cleanings to complex electronic repairs and custom modifications, we bring your camera back to life."
@@ -25,7 +26,7 @@
   {
     "frontmatter": {
       "title": "Worldwide Shipping",
-      "image": "/assets/images/shipping.jpg",
+      "image": "undraw_heavy_box_agqi.svg",
       "slug": "feature-shipping"
     },
     "content": "Based in Australia, but we happily accept repairs from and ship cameras to anywhere in the world."

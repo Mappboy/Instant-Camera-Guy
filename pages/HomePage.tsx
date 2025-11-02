@@ -6,6 +6,16 @@ import type { ContentPiece } from '../types';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PolaroidCard from '../components/PolaroidCard';
 
+function getImageUrl(name) {
+  if (!name) return '';
+  if (name.startsWith('http://') || name.startsWith('https://')) {
+    return name;
+  }
+  const images = import.meta.glob('/assets/images/**');
+  const imagePath = Object.keys(images).find(path => path.endsWith(name));
+  return imagePath ? new URL(imagePath, import.meta.url).href : '';
+}
+
 const HomePage: React.FC = () => {
   const [content, setContent] = useState<Record<string, ContentPiece>>({});
   const [features, setFeatures] = useState<ContentPiece[]>([]);
@@ -14,7 +24,7 @@ const HomePage: React.FC = () => {
   useEffect(() => {
     const fetchContent = async () => {
       setLoading(true);
-      const slugs = ['hero', 'about', 'photos', 'contact', 'more-to-come'];
+      const slugs = ['hero', 'about', 'repairs','photos', 'contact', 'more-to-come'];
       const promises = slugs.map(slug => contentService.getContent(slug));
       const results = await Promise.all(promises);
       const contentMap: Record<string, ContentPiece> = {};
@@ -40,17 +50,11 @@ const HomePage: React.FC = () => {
   return (
     <div className="flex flex-col gap-16 sm:gap-24 md:gap-32">
       {/* Hero Section */}
-      {content.hero && (
+      {content.hero && (        
         <section className="text-center mt-8 sm:mt-16">
           <h1 className="text-4xl md:text-6xl font-special text-primary leading-tight">
             {content.hero.frontmatter.title}
           </h1>
-          <a 
-            href="/repair" 
-            className="mt-8 inline-block bg-accent-red text-background font-bold py-3 px-8 rounded-sm shadow-lg hover:bg-accent-red/90 transition-colors"
-          >
-            Camera Repair Services
-          </a>
         </section>
       )}
 
@@ -75,7 +79,7 @@ const HomePage: React.FC = () => {
           <PolaroidCard
             key={feature.frontmatter.slug}
             title={feature.frontmatter.title}
-            image={feature.frontmatter.image || ''}
+            image={ getImageUrl(feature.frontmatter.image)}
             excerpt={feature.content}
           />
         ))}
@@ -94,6 +98,22 @@ const HomePage: React.FC = () => {
         </section>
       )}
       
+      {/* Repairs Section */}
+      {content.repairs && (
+        <section id="repairs" className="scroll-mt-24 max-w-4xl mx-auto">
+            <h2 className="text-4xl font-special mb-8 text-center">{content.repairs.frontmatter.title}</h2>
+            <div className="prose lg:prose-lg mx-auto bg-background p-8 sm:p-12 shadow-lg rounded-sm border-t-8 border-accent-red">
+                 <ReactMarkdown remarkPlugins={[remarkGfm]}>{content.repairs.content}</ReactMarkdown>
+            </div>
+          <a 
+            href="/Intstant-Camera-Guy-2025-Redesign/repair" 
+            className="mt-8 inline-block bg-accent-red text-background font-bold py-3 px-8 rounded-sm shadow-lg hover:bg-accent-red/90 transition-colors"
+          >
+            More Info ... 
+          </a>
+        </section>)
+      }
+
       {/* More To Come Section */}
       {content['more-to-come'] && (
          <section className="text-center max-w-2xl mx-auto">
