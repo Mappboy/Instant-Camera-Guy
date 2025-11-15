@@ -4,7 +4,7 @@ const repairProcess = [
   {
     step: 1,
     title: 'Contact Us',
-    description: 'Get in touch via our contact form with your camera model and the issue you are experiencing.',
+    description: 'Get in touch via Instagram, or Facebook with your camera model and the issue you are experiencing.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
     ),
@@ -118,11 +118,13 @@ const RepairsPage: React.FC = () => {
       <section id="contact-repair" className="scroll-mt-24 max-w-2xl mx-auto">
          <h2 className="text-4xl font-special mb-8 text-center">Ready to start?</h2>
          <div className="prose lg:prose-lg mx-auto bg-background p-8 sm:p-12 shadow-lg rounded-sm border-t-8 border-accent-teal">
-           <p>Get in touch to discuss your repair or ask any questions.</p>
+           <p>For the quickest response and a quote, please message us on Instagram. You'll find our up-to-date price lists and see our latest work there. Facebook is also great!</p>
+           <p>Please only email if this is your last option, as we use it less frequently.</p>
            <ul>
-            <li><strong>Phone:</strong> <a href="tel:0431845455">0431 845 455</a></li>
-            <li><strong>Email:</strong> <a href="mailto:theinstantcameraguy@hotmail.com">theinstantcameraguy@hotmail.com</a></li>
+            <li><strong>Instagram (Preferred):</strong> <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Message us on Instagram</a></li>
             <li><strong>Facebook:</strong> <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Message us on Facebook</a></li>
+            <li><strong>Phone:</strong> <a href="tel:0431845455">0431 845 455</a></li>
+            <li><strong>Email (Last Resort):</strong> <a href="mailto:theinstantcameraguy@hotmail.com">theinstantcameraguy@hotmail.com</a></li>
            </ul>
         </div>
       </section>

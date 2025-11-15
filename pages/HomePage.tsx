@@ -5,6 +5,7 @@ import { contentService } from '../services/contentService';
 import type { ContentPiece } from '../types';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PolaroidCard from '../components/PolaroidCard';
+import InstagramFeed from '../components/InstagramFeed';
 
 function getImageUrl(name) {
   if (!name) return '';
@@ -113,22 +114,26 @@ const HomePage: React.FC = () => {
           </a>
         </section>)
       }
-
-      {/* More To Come Section */}
-      {content['more-to-come'] && (
-         <section className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl font-special mb-4">{content['more-to-come'].frontmatter.title}</h2>
-            <p className="text-primary/80">{content['more-to-come'].content}</p>
-         </section>
-      )}
-
-      {/* Photos Section Placeholder */}
-      {content.photos && (
-        <section id="photos" className="scroll-mt-24 text-center">
-             <h2 className="text-4xl font-special mb-4">{content.photos.frontmatter.title}</h2>
-             <p className="text-primary/80">{content.photos.content}</p>
-        </section>
-      )}
+      {/* Instagram Section */}
+      <section id="instagram" className="scroll-mt-24">
+        <div className="text-center">
+            <h2 className="text-4xl font-special mb-4">Follow Our Journey</h2>
+            <p className="max-w-2xl mx-auto text-primary/80 mb-8">
+                Check out our latest repairs, custom mods, and favorite instant shots on Instagram. It's the best place to see what we're up to!
+            </p>
+        </div>
+        <InstagramFeed />
+        <div className="text-center">
+            <a
+                href="https://www.instagram.com/theinstantcameraguy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block bg-accent-teal text-background font-bold py-3 px-8 rounded-sm shadow-lg hover:bg-accent-teal/90 transition-colors"
+            >
+                Follow on Instagram
+            </a>
+        </div>
+      </section>
 
       {/* Contact Section */}
       {content.contact && (
