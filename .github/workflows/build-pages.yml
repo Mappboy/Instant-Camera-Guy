@@ -8,6 +8,10 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+env:
+  # Setting an environment variable with the value of a configuration variable
+  INSTAGRAM_APP_ID: ${{ secrets.INSTAGRAM_APP_ID }}
+  INSTAGRAM_APP_SECRET: ${{ secrets.INSTAGRAM_APP_SECRET }}
 
 # Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
 permissions:
