@@ -1,5 +1,4 @@
 import React from 'react';
-import Layout from '../components/Layout'; // Import the Layout component
 
 const repairProcess = [
   {
@@ -113,6 +112,30 @@ const RepairsPage: React.FC = () => {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Uncollected Cameras Section */}
+        <section className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-special mb-8">Uncollected Cameras</h2>
+            <div className="prose lg:prose-lg mx-auto bg-background p-8 sm:p-12 shadow-lg rounded-sm border-t-8 border-accent-red">
+                <p>Please note that repaired cameras must be picked up within 3 months of works being completed. Uncollected cameras will be sold on or scrapped for parts to recoup costs as per the Salvage Rights law.</p>
+            </div>
+        </section>
+
+        {/* Fuji Instax Cameras Section */}
+        <section className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-special mb-8">Fuji Instax Cameras</h2>
+            <div className="prose lg:prose-lg mx-auto bg-background p-8 sm:p-12 shadow-lg rounded-sm border-t-8 border-accent-green">
+                <p>Please note that I do NOT service Fuji Instax cameras. These cameras are sadly designed to be easier to replace than repair, and are generally available brand new for less than I could charge to fix them.</p>
+            </div>
+        </section>
+
+        {/* Warranty Section */}
+        <section className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-special mb-8">Warranty</h2>
+            <div className="prose lg:prose-lg mx-auto bg-background p-8 sm:p-12 shadow-lg rounded-sm border-t-8 border-accent-teal">
+                <p>All cameras I sell come with a 6 month warranty for all services performed to the camera. Should it fail, simply send it back to me and I will repair it without extra cost. Exceptions are in cases of physical or water damage, dead integrated circuits, failed reduction gears in the gear-train and user error resulting in mangled pick-arms. In cases where one of the aforementioned fails, critical spare parts will be required at additional cost, but will be supplied as cheaply as possible.</p>
+            </div>
         </section>
         
         {/* Contact Section */}
