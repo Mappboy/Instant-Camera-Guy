@@ -61,7 +61,6 @@ const commonRepairs = [
 
 const RepairsPage: React.FC = () => {
   return (
-    <Layout simpleHeader> {/* Use Layout with simpleHeader prop */}
       <div className="flex flex-col gap-16 sm:gap-24 md:gap-32">
         {/* Hero Section */}
         <section className="text-center mt-8 sm:mt-16">
@@ -131,7 +130,6 @@ const RepairsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </Layout>
   );
 };
 
