@@ -4,7 +4,7 @@ const Header: React.FC = () => {
   const navItems = [
     { name: 'About', path: '#about', color: 'text-accent-green' },
     { name: 'Repairs', path: '#repairs', color: 'text-accent-red' },
-    { name: 'Photos', path: '#photos', color: 'text-accent-tan' },
+    { name: 'Follow Us', path: '#instagram', color: 'text-accent-tan' },
     { name: 'Contact', path: '#contact', color: 'text-accent-teal' },
   ];
 

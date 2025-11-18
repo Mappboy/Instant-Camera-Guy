@@ -9,7 +9,6 @@ const InstagramFeed: React.FC = () => {
           .igwrapper iframe { border: 0; position: relative; z-index: 2; }
           .igwrapper a { color: rgba(0,0,0,0); position: absolute; left: 0; top: 0; z-index: 0; }
         `}</style>
-        <a href="https://fnfmods.net/week-8/">fnf week 8</a>
         <script async src="https://www.instagram.com/embed.js"></script>
         <blockquote
           className="instagram-media"

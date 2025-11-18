@@ -11,10 +11,10 @@ const App: React.FC = () => {
     <BrowserRouter>
       <Layout>
         <Routes>
-          <Route path="/Intstant-Camera-Guy-2025-Redesign/" element={<HomePage />} />
-          <Route path="/Intstant-Camera-Guy-2025-Redesign/repair" element={<RepairsPage />} />
-          <Route path="/Intstant-Camera-Guy-2025-Redesign/:category" element={<ListPage />} />
-          <Route path="/Intstant-Camera-Guy-2025-Redesign/:category/:slug" element={<PostPage />} />
+          <Route path="/Instant-Camera-Guy/" element={<HomePage />} />
+          <Route path="/Instant-Camera-Guy/repair" element={<RepairsPage />} />
+          <Route path="/Instant-Camera-Guy/:category" element={<ListPage />} />
+          <Route path="/Instant-Camera-Guy/:category/:slug" element={<PostPage />} />
         </Routes>
       </Layout>
     </BrowserRouter>

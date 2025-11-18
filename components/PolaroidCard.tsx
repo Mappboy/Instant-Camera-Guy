@@ -20,7 +20,7 @@ const PolaroidCard: React.FC<PolaroidCardProps> = ({ image, title, excerpt }) =>
             <img
             src={image}
             alt={title}
-            className="w-full h-auto object-cover"
+            className="w-full h-auto object-cover aspect-square"
             loading="lazy"
             />
         </div>

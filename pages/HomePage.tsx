@@ -53,12 +53,13 @@ const HomePage: React.FC = () => {
       {/* Polaroid Camera Image Section */}
       <section>
         <div
-          className="h-[400px] md:h-[600px] w-full"
+          className="relative w-full"
           style={{
+            paddingTop: '56.25%', // 16:9 Aspect Ratio
             backgroundImage: `url("https://www.datocms-assets.com/12178/1587301302-sx70.png?q=90&auto=format&w=800&h=800&fit=clip")`,
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center 70%',
-            backgroundSize: 'auto',
+            backgroundSize: 'cover',
           }}
           aria-label="A vintage Polaroid SX-70 camera"
           role="img"
@@ -98,7 +99,7 @@ const HomePage: React.FC = () => {
                  <ReactMarkdown remarkPlugins={[remarkGfm]}>{content.repairs.content}</ReactMarkdown>
             </div>
           <a 
-            href="/Intstant-Camera-Guy-2025-Redesign/repair" 
+            href="/Instant-Camera-Guy/repair" 
             className="mt-8 inline-block bg-accent-red text-background font-bold py-3 px-8 rounded-sm shadow-lg hover:bg-accent-red/90 transition-colors"
           >
             More Info ... 
