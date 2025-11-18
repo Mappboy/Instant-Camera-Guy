@@ -1,4 +1,5 @@
 import React from 'react';
+import Layout from '../components/Layout'; // Import the Layout component
 
 const repairProcess = [
   {
@@ -60,75 +61,77 @@ const commonRepairs = [
 
 const RepairsPage: React.FC = () => {
   return (
-    <div className="flex flex-col gap-16 sm:gap-24 md:gap-32">
-      {/* Hero Section */}
-      <section className="text-center mt-8 sm:mt-16">
-        <h1 className="text-4xl md:text-6xl font-special text-primary leading-tight">
-          Instant Camera Repairs
-        </h1>
-        <p className="mt-4 text-lg md:text-xl text-primary/80 max-w-2xl mx-auto">
-          Breathe new life into your vintage Polaroid camera. We specialise in repairing the cameras you love.
-        </p>
-        <a 
-          href="#contact-repair" 
-          className="mt-8 inline-block bg-accent-red text-background font-bold py-3 px-8 rounded-sm shadow-lg hover:bg-accent-red/90 transition-colors"
-        >
-          Get a Quote
-        </a>
-      </section>
+    <Layout simpleHeader> {/* Use Layout with simpleHeader prop */}
+      <div className="flex flex-col gap-16 sm:gap-24 md:gap-32">
+        {/* Hero Section */}
+        <section className="text-center mt-8 sm:mt-16">
+          <h1 className="text-4xl md:text-6xl font-special text-primary leading-tight">
+            Instant Camera Repairs
+          </h1>
+          <p className="mt-4 text-lg md:text-xl text-primary/80 max-w-2xl mx-auto">
+            Breathe new life into your vintage Polaroid camera. We specialise in repairing the cameras you love.
+          </p>
+          <a 
+            href="#contact-repair" 
+            className="mt-8 inline-block bg-accent-red text-background font-bold py-3 px-8 rounded-sm shadow-lg hover:bg-accent-red/90 transition-colors"
+          >
+            Get a Quote
+          </a>
+        </section>
 
-      {/* Repair Process Section */}
-      <section>
-        <h2 className="text-4xl font-special mb-12 text-center">Our Repair Process</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {repairProcess.map((item) => (
-            <div key={item.step} className="text-center p-6 bg-background shadow-md rounded-sm border-t-4 border-accent-tan">
-              <div className="flex items-center justify-center h-20 w-20 mx-auto bg-primary/5 rounded-full text-accent-teal mb-4">
-                {item.icon}
+        {/* Repair Process Section */}
+        <section>
+          <h2 className="text-4xl font-special mb-12 text-center">Our Repair Process</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {repairProcess.map((item) => (
+              <div key={item.step} className="text-center p-6 bg-background shadow-md rounded-sm border-t-4 border-accent-tan">
+                <div className="flex items-center justify-center h-20 w-20 mx-auto bg-primary/5 rounded-full text-accent-teal mb-4">
+                  {item.icon}
+                </div>
+                <h3 className="font-special text-2xl font-bold text-primary mb-2">
+                  {item.step}. {item.title}
+                </h3>
+                <p className="text-primary/80 text-sm">
+                  {item.description}
+                </p>
               </div>
-              <h3 className="font-special text-2xl font-bold text-primary mb-2">
-                {item.step}. {item.title}
-              </h3>
-              <p className="text-primary/80 text-sm">
-                {item.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
 
-      {/* Common Repairs Section */}
-      <section>
-        <h2 className="text-4xl font-special mb-12 text-center">Common Camera Repairs</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {commonRepairs.map((repair) => (
-            <div key={repair.title} className={`bg-background p-8 shadow-lg rounded-sm border-l-8 ${repair.color}`}>
-              <h3 className="font-special text-3xl font-bold text-primary mb-3">
-                {repair.title}
-              </h3>
-              <p className="text-primary/80">
-                {repair.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-      
-      {/* Contact Section */}
-      <section id="contact-repair" className="scroll-mt-24 max-w-2xl mx-auto">
-         <h2 className="text-4xl font-special mb-8 text-center">Ready to start?</h2>
-         <div className="prose lg:prose-lg mx-auto bg-background p-8 sm:p-12 shadow-lg rounded-sm border-t-8 border-accent-teal">
+        {/* Common Repairs Section */}
+        <section>
+          <h2 className="text-4xl font-special mb-12 text-center">Common Camera Repairs</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {commonRepairs.map((repair) => (
+              <div key={repair.title} className={`bg-background p-8 shadow-lg rounded-sm border-l-8 ${repair.color}`}>
+                <h3 className="font-special text-3xl font-bold text-primary mb-3">
+                  {repair.title}
+                </h3>
+                <p className="text-primary/80">
+                  {repair.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+        
+        {/* Contact Section */}
+        <section id="contact-repair" className="scroll-mt-24 max-w-2xl mx-auto">
+           <h2 className="text-4xl font-special mb-8 text-center">Ready to start?</h2>
+           <div className="prose lg:prose-lg mx-auto bg-background p-8 sm:p-12 shadow-lg rounded-sm border-t-8 border-accent-teal">
            <p>For the quickest response and a quote, please message us on Instagram. You'll find our up-to-date price lists and see our latest work there. Facebook is also great!</p>
            <p>Please only email if this is your last option, as we use it less frequently.</p>
            <ul>
-            <li><strong>Instagram (Preferred):</strong> <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Message us on Instagram</a></li>
-            <li><strong>Facebook:</strong> <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Message us on Facebook</a></li>
+            <li><strong>Instagram (Preferred):</strong> <a href="https://www.instagram.com/theinstantcameraguy/" target="_blank" rel="noopener noreferrer">Message us on Instagram</a></li>
+            <li><strong>Facebook:</strong> <a href="https://m.me/instantcameraguy" target="_blank" rel="noopener noreferrer">Message us on Facebook</a></li>
             <li><strong>Phone:</strong> <a href="tel:0431845455">0431 845 455</a></li>
             <li><strong>Email (Last Resort):</strong> <a href="mailto:theinstantcameraguy@hotmail.com">theinstantcameraguy@hotmail.com</a></li>
            </ul>
-        </div>
-      </section>
-    </div>
+          </div>
+        </section>
+      </div>
+    </Layout>
   );
 };
 
