@@ -8,15 +8,15 @@ import Layout from './components/Layout';
 
 const AppContent: React.FC = () => {
   const location = useLocation();
-  const isRepairPage = location.pathname === '/Instant-Camera-Guy/repair';
+  const isRepairPage = location.pathname === '/repair';
 
   return (
     <Layout simpleHeader={isRepairPage}>
       <Routes>
-        <Route path="/Instant-Camera-Guy/" element={<HomePage />} />
-        <Route path="/Instant-Camera-Guy/repair" element={<RepairsPage />} />
-        <Route path="/Instant-Camera-Guy/:category" element={<ListPage />} />
-        <Route path="/Instant-Camera-Guy/:category/:slug" element={<PostPage />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/repair" element={<RepairsPage />} />
+        <Route path="/:category" element={<ListPage />} />
+        <Route path="/:category/:slug" element={<PostPage />} />
       </Routes>
     </Layout>
   );

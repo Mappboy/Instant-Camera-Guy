@@ -99,7 +99,7 @@ const HomePage: React.FC = () => {
                  <ReactMarkdown remarkPlugins={[remarkGfm]}>{content.repairs.content}</ReactMarkdown>
             </div>
           <a 
-            href="/Instant-Camera-Guy/repair" 
+            href="/repair" 
             className="mt-8 inline-block bg-accent-red text-background font-bold py-3 px-8 rounded-sm shadow-lg hover:bg-accent-red/90 transition-colors"
           >
             More Info ... 
