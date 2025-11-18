@@ -7,7 +7,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      base: '/Intstant-Camera-Guy-2025-Redesign/',
+      base: '/Instant-Camera-Guy/',
       server: {
         port: 3000,
         host: '0.0.0.0',

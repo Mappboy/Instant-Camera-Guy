@@ -23,12 +23,12 @@ https.get(url, (res) => {
     try {
       const parsedData = JSON.parse(data);
       if (parsedData.access_token) {
-        const envFilePath = path.join(process.cwd(), '.env.local');
-        const envContent = `VITE_INSTAGRAM_ACCESS_TOKEN=${parsedData.access_token}\n`;
+        const envFilePath = path.join(process.cwd(), '.env');
+        const envContent = `\nVITE_INSTAGRAM_ACCESS_TOKEN=${parsedData.access_token}\n`;
         
-        fs.writeFileSync(envFilePath, envContent);
+        fs.appendFileSync(envFilePath, envContent);
         
-        console.log('Access token fetched and saved to .env.local');
+        console.log('Access token fetched and saved to .env');
       } else {
         console.error('Failed to fetch access token:', parsedData);
       }

@@ -6,16 +6,7 @@ import type { ContentPiece } from '../types';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PolaroidCard from '../components/PolaroidCard';
 import InstagramFeed from '../components/InstagramFeed';
-
-function getImageUrl(name) {
-  if (!name) return '';
-  if (name.startsWith('http://') || name.startsWith('https://')) {
-    return name;
-  }
-  const images = import.meta.glob('/assets/images/**');
-  const imagePath = Object.keys(images).find(path => path.endsWith(name));
-  return imagePath ? new URL(imagePath, import.meta.url).href : '';
-}
+import { getImageUrl } from '../utils/imageUtils';
 
 const HomePage: React.FC = () => {
   const [content, setContent] = useState<Record<string, ContentPiece>>({});

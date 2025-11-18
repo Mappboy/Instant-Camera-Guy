@@ -3,7 +3,7 @@ import React from 'react';
 const Header: React.FC = () => {
   const navItems = [
     { name: 'About', path: '#about', color: 'text-accent-green' },
-    { name: 'Repairs', path: '/repair', color: 'text-accent-red' },
+    { name: 'Repairs', path: '#repairs', color: 'text-accent-red' },
     { name: 'Photos', path: '#photos', color: 'text-accent-tan' },
     { name: 'Contact', path: '#contact', color: 'text-accent-teal' },
   ];
