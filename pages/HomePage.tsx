@@ -42,18 +42,9 @@ const HomePage: React.FC = () => {
   return (
     <div className="flex flex-col gap-16 sm:gap-24 md:gap-32">
       {/* Hero Section */}
-      {content.hero && (        
-        <section className="text-center mt-8 sm:mt-16">
-          <h1 className="text-4xl md:text-6xl font-special text-primary leading-tight">
-            {content.hero.frontmatter.title}
-          </h1>
-        </section>
-      )}
-
-      {/* Polaroid Camera Image Section */}
-      <section>
-        <div
-          className="relative w-full"
+      {content.hero && (
+        <section
+          className="relative w-full flex items-center justify-center text-center"
           style={{
             paddingTop: '56.25%', // 16:9 Aspect Ratio
             backgroundImage: `url("https://www.datocms-assets.com/12178/1587301302-sx70.png?q=90&auto=format&w=800&h=800&fit=clip")`,
@@ -63,8 +54,16 @@ const HomePage: React.FC = () => {
           }}
           aria-label="A vintage Polaroid SX-70 camera"
           role="img"
-        ></div>
-      </section>
+        >
+          {/* Overlay for readability */}
+          <div className="absolute inset-0 bg-black opacity-40"></div>
+          <div className="absolute inset-0 flex items-center justify-center p-4">
+            <h1 className="text-4xl md:text-6xl font-special text-white leading-tight z-10 drop-shadow-lg">
+              {content.hero.frontmatter.title}
+            </h1>
+          </div>
+        </section>
+      )}
 
       {/* Features Section */}
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
