@@ -109,9 +109,9 @@ const HomePage: React.FC = () => {
       {/* Instagram Section */}
       <section id="instagram" className="scroll-mt-24">
         <div className="text-center">
-            <h2 className="text-4xl font-special mb-4">Follow Our Journey</h2>
+            <h2 className="text-4xl font-special mb-4">Follow My Journey</h2>
             <p className="max-w-2xl mx-auto text-primary/80 mb-8">
-                Check out our latest repairs, custom mods, and favorite instant shots on Instagram. It's the best place to see what we're up to!
+                Check out my latest repairs, custom mods, and favorite instant shots on Instagram. It's the best place to see what I'm up to!
             </p>
         </div>
         <InstagramFeed />

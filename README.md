@@ -4,7 +4,7 @@ This repository contains the source code for the 2025 redesign of the Instant Ca
 
 ## About
 
-The Instant Camera Guy is a passionate collector and repairer of vintage Polaroid cameras. This website serves as a portfolio of his work, a blog for sharing his knowledge, and a contact point for repair inquiries.
+The Instant Camera Guy is a passionate collector and repairer of vintage Polaroid cameras. This website serves as a portfolio of my work, a blog for sharing my knowledge, and a contact point for repair inquiries.
 
 ## Running Locally
 
