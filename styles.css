@@ -3,6 +3,19 @@
 html {
   scroll-behavior: smooth;
 }
+@font-face {
+  font-family: 'Montserrat';
+  font-display: auto;
+  src: url(@fontsource-variable/montserrat/files/montserrat-latin-wght-normal.woff2) 
+  format('woff2-variations');
+}
+@font-face {
+  font-family: 'Special Elite';
+  font-display: auto;
+  src: url(@fontsource/special-elite/files/special-elite-latin-400-normal.woff2) 
+  format('woff2');
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
 }

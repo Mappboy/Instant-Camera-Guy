@@ -9,7 +9,7 @@ const InstagramFeed: React.FC = () => {
           .igwrapper iframe { border: 0; position: relative; z-index: 2; }
           .igwrapper a { color: rgba(0,0,0,0); position: absolute; left: 0; top: 0; z-index: 0; }
         `}</style>
-        <script async src="https://www.instagram.com/embed.js"></script>
+        <script async src="https://www.instagram.com/embed.js" crossOrigin="anonymous"></script>
         <blockquote
           className="instagram-media"
           data-instgrm-permalink="https://www.instagram.com/theinstantcameraguy/"

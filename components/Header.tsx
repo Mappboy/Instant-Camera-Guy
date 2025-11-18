@@ -23,7 +23,7 @@ const Header: React.FC = () => {
                 <a
                   key={item.name}
                   href={item.path}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-opacity duration-200 ${item.color} hover:opacity-75`}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${item.color} hover:underline`}
                 >
                   {item.name}
                 </a>

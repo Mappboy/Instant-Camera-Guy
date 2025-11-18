@@ -9,7 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource-variable/montserrat": "^5.2.8",
+    "@fontsource/special-elite": "^5.2.8",
+    "@responsive-image/react": "^1.1.5",
     "@tailwindcss/vite": "^4.1.16",
+    "pnpm": "^10.22.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-markdown": "^10.1.0",
@@ -18,11 +22,14 @@
     "tailwindcss": "^4.1.16"
   },
   "devDependencies": {
+    "@responsive-image/core": "^2.1.0",
+    "@responsive-image/vite-plugin": "^2.0.2",
     "@tailwindcss/typography": "^0.5.19",
     "@types/node": "^22.14.0",
     "@vitejs/plugin-react": "^5.0.0",
     "typescript": "~5.8.2",
     "vite": "^6.2.0",
-    "vite-plugin-pwa": "^1.1.0"
+    "vite-plugin-pwa": "^1.1.0",
+    "vite-plugin-webfont-dl": "^3.11.1"
   }
 }

@@ -7,6 +7,8 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import PolaroidCard from '../components/PolaroidCard';
 import InstagramFeed from '../components/InstagramFeed';
 import { getImageUrl } from '../utils/imageUtils';
+import { ResponsiveImage } from '@responsive-image/react';
+import HeroImage from '../assets/images/sx_70.png?responsive';
 
 const HomePage: React.FC = () => {
   const [content, setContent] = useState<Record<string, ContentPiece>>({});
@@ -43,24 +45,23 @@ const HomePage: React.FC = () => {
     <div className="flex flex-col gap-16 sm:gap-24 md:gap-32">
       {/* Hero Section */}
       {content.hero && (
-        <section
-          className="relative w-full flex items-center justify-center text-center"
-          style={{
-            paddingTop: '56.25%', // 16:9 Aspect Ratio
-            backgroundImage: `url("https://www.datocms-assets.com/12178/1587301302-sx70.png?q=90&auto=format&w=800&h=800&fit=clip")`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center 70%',
-            backgroundSize: 'cover',
-          }}
-          aria-label="A vintage Polaroid SX-70 camera"
-          role="img"
-        >
-          {/* Overlay for readability */}
-          <div className="absolute inset-0 bg-black opacity-40"></div>
-          <div className="absolute inset-0 flex items-center justify-center p-4">
-            <h1 className="text-4xl md:text-6xl font-special text-white leading-tight z-10 drop-shadow-lg">
+        <section className="w-full">
+          <div className="p-4 text-center">
+            <h1 className="text-4xl md:text-6xl font-special leading-tight z-10">
               {content.hero.frontmatter.title}
             </h1>
+          </div>
+          <div
+            className="relative w-full"
+            style={{
+              paddingTop: '70%', // 16:9 Aspect Ratio
+            }}
+          >
+            <ResponsiveImage src={HeroImage}
+              alt="A vintage Polaroid SX-70 camera"
+              width={80}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
           </div>
         </section>
       )}
