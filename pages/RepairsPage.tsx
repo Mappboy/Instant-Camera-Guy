@@ -4,7 +4,7 @@ const repairProcess = [
   {
     step: 1,
     title: 'Contact Me',
-    description: 'Get in touch via Instagram, or Facebook with your camera model and the issue you are experiencing.',
+    description: 'Get in touch via Instagram, or Facebook with your camera model and the issue you are experiencing. I prefer instagram due to the easy ability to share video, voice memos and photos. My current repairs are done via seasons due to high demand. You can tell if the season is open or closed by visiting my Instagram page.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
     ),
@@ -20,7 +20,7 @@ const repairProcess = [
   {
     step: 3,
     title: 'I Repair',
-    description: 'I\'ll diagnose the fault, confirm the quote with you, and carry out the professional repair.',
+    description: 'I\'ll  diagnose the fault, confirm the quote with you, and carry out the professional repair.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
     ),
@@ -28,7 +28,7 @@ const repairProcess = [
   {
     step: 4,
     title: 'Return Shipping',
-    description: 'Once repaired and fully tested, I\'ll safely package and ship your camera right back to you.',
+    description: 'Once repaired and fully tested, we\'ll safely package and ship your camera right back to you.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" /></svg>
     ),
@@ -142,12 +142,13 @@ const RepairsPage: React.FC = () => {
         <section id="contact-repair" className="scroll-mt-24 max-w-2xl mx-auto">
            <h2 className="text-4xl font-special mb-8 text-center">Ready to start?</h2>
            <div className="prose lg:prose-lg mx-auto bg-background p-8 sm:p-12 shadow-lg rounded-sm border-t-8 border-accent-teal">
-           <p>For the quickest response and a quote, please message me on Instagram. You'll find my up-to-date price lists and see my latest work there. Facebook is also great!</p>
-           <p>Please only email if this is your last option, as I use it less frequently.</p>
+           <p>For the quickest response and a quote, please message us on Instagram or Facebook. You'll find my up-to-date price lists and see my latest work there. </p>
+           <p>Social media is my preferred method of contact due to the easy ability to send videos, photos and voice memos about your cameras repair process.</p>
+           <p>Please only email if you have no other option. Email is harder to share videos of your camera in action, and as a result I use email infrequently.</p>
            <ul>
-            <li><strong>Instagram (Preferred):</strong> <a href="https://www.instagram.com/theinstantcameraguy/" target="_blank" rel="noopener noreferrer">Message me on Instagram</a></li>
-            <li><strong>Facebook:</strong> <a href="https://m.me/instantcameraguy" target="_blank" rel="noopener noreferrer">Message me on Facebook</a></li>
-            <li><strong>Email (Last Resort):</strong> <a href="mailto:theinstantcameraguy@hotmail.com">theinstantcameraguy@hotmail.com</a></li>
+            <li><strong>Preferred contact: Instagram</strong> <a href="https://www.instagram.com/theinstantcameraguy/" target="_blank" rel="noopener noreferrer">Message me on Instagram</a></li>
+            <li><strong>2nd Preference: Facebook:</strong> <a href="https://m.me/instantcameraguy" target="_blank" rel="noopener noreferrer">Message me on Facebook</a></li>
+            <li><strong>Email:</strong> <a href="mailto:theinstantcameraguy@hotmail.com">theinstantcameraguy@hotmail.com</a></li>
            </ul>
           </div>
         </section>
