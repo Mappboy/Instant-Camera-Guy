@@ -55,7 +55,7 @@ const InstagramFeed: React.FC = () => {
           ></blockquote>
         </div>
       ) : (
-        <div className="w-full max-w-xl min-w-[460px] mx-auto" style={{minHeight: '800px'}} />
+        <div className="w-full max-w-xl min-w-[400px] mx-auto" style={{minHeight: '800px'}} />
       )}
     </div>
   );
