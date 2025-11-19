@@ -1,7 +1,8 @@
 import React from 'react';
+import { ResponsiveImage } from '@responsive-image/react';
 
 interface PolaroidCardProps {
-  image: string;
+  image: any;
   title: string;
   excerpt: string;
 }
@@ -17,11 +18,10 @@ const PolaroidCard: React.FC<PolaroidCardProps> = ({ image, title, excerpt }) =>
         style={{ transform: `rotate(${rotation}deg)` }}
       >
         <div className="bg-primary/5">
-            <img
-            src={image}
+            <ResponsiveImage
+            src={image.default}
             alt={title}
             className="w-full h-auto object-cover aspect-square"
-            loading="lazy"
             />
         </div>
         <div className="pt-4 text-center">

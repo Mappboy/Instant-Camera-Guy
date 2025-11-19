@@ -6,9 +6,9 @@ import type { ContentPiece } from '../types';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PolaroidCard from '../components/PolaroidCard';
 import InstagramFeed from '../components/InstagramFeed';
-import { getImageUrl } from '../utils/imageUtils';
+import { getImageUrl, getImageUrlHref } from '../utils/imageUtils';
 import { ResponsiveImage } from '@responsive-image/react';
-import HeroImage from '../assets/images/sx_70.png?responsive';
+import HeroImage from '../assets/images/sx_70.png?lqip=blurhash&responsive';
 import YouTubeEmbed from '../components/YouTubeEmbed';
 
 const HomePage: React.FC = () => {
@@ -78,7 +78,7 @@ const HomePage: React.FC = () => {
           <PolaroidCard
             key={feature.frontmatter.slug}
             title={feature.frontmatter.title}
-            image={ getImageUrl(feature.frontmatter.image)}
+            image={ getImageUrl(feature.frontmatter.image, {responsive:true})}
             excerpt={feature.content}
           />
         ))}
