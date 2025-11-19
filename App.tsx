@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import RepairsPage from './pages/RepairsPage';
 import ListPage from './pages/ListPage';
 import PostPage from './pages/PostPage';
+import VideosPage from './pages/VideosPage';
 import Layout from './components/Layout';
 
 const AppContent: React.FC = () => {
@@ -15,6 +16,7 @@ const AppContent: React.FC = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/repair" element={<RepairsPage />} />
+        <Route path="/videos" element={<VideosPage />} />
         <Route path="/:category" element={<ListPage />} />
         <Route path="/:category/:slug" element={<PostPage />} />
       </Routes>

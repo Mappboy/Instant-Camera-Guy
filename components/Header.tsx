@@ -5,6 +5,7 @@ const Header: React.FC = () => {
     { name: 'About', path: '#about', color: 'text-accent-green' },
     { name: 'Repairs', path: '#repairs', color: 'text-accent-red' },
     { name: 'Follow Me', path: '#instagram', color: 'text-accent-tan' },
+    { name: 'Videos', path: '#videos', color: 'text-accent-blue' },
     { name: 'Contact', path: '#contact', color: 'text-accent-teal' },
   ];
 

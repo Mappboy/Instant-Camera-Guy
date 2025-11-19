@@ -9,11 +9,17 @@ import InstagramFeed from '../components/InstagramFeed';
 import { getImageUrl } from '../utils/imageUtils';
 import { ResponsiveImage } from '@responsive-image/react';
 import HeroImage from '../assets/images/sx_70.png?responsive';
+import YouTubeEmbed from '../components/YouTubeEmbed';
 
 const HomePage: React.FC = () => {
   const [content, setContent] = useState<Record<string, ContentPiece>>({});
   const [features, setFeatures] = useState<ContentPiece[]>([]);
   const [loading, setLoading] = useState(true);
+
+  const featuredVideo = {
+    "title": "The SX-70R PCB",
+    "id": "eTm0L0xm6Cc"
+  };
 
   useEffect(() => {
     const fetchContent = async () => {
@@ -77,7 +83,7 @@ const HomePage: React.FC = () => {
           />
         ))}
       </section>
-
+      
       {/* About Section */}
       {content.about && (
         <section id="about" className="scroll-mt-24 max-w-4xl mx-auto text-center">
@@ -125,6 +131,21 @@ const HomePage: React.FC = () => {
                 Follow on Instagram
             </a>
         </div>
+      </section>
+
+      {/* Videos Section */}
+      <section id="videos" className="scroll-mt-24">
+          <h2 className="text-4xl font-special mb-8 text-center">Featured Video</h2>
+          <div className="bg-background p-8 sm:p-12 shadow-lg rounded-sm border-t-8 border-accent-blue">
+              <h3 className="text-2xl font-special mb-4">{featuredVideo.title}</h3>
+              <YouTubeEmbed videoId={featuredVideo.id} title={featuredVideo.title} />
+          </div>
+          <a 
+              href="/videos" 
+              className="mt-8 inline-block bg-accent-blue text-background font-bold py-3 px-8 rounded-sm shadow-lg hover:bg-accent-blue/90 transition-colors"
+          >
+              More Videos
+          </a>
       </section>
 
       {/* Contact Section */}
