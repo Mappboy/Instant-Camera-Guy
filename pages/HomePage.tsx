@@ -8,7 +8,8 @@ import PolaroidCard from '../components/PolaroidCard';
 import InstagramFeed from '../components/InstagramFeed';
 import { getImageUrl, getImageUrlHref } from '../utils/imageUtils';
 import { ResponsiveImage } from '@responsive-image/react';
-import HeroImage from '../assets/images/sx_70.png?lqip=blurhash&responsive';
+import HeroImage from '../assets/images/sx_70.png?lqip=blurhashr&responsive';
+import JakeProfileImage from '../assets/images/jake_profile.jpg?lqip=blurhash&responsive';
 import YouTubeEmbed from '../components/YouTubeEmbed';
 
 const HomePage: React.FC = () => {
@@ -78,7 +79,7 @@ const HomePage: React.FC = () => {
           <PolaroidCard
             key={feature.frontmatter.slug}
             title={feature.frontmatter.title}
-            image={ getImageUrl(feature.frontmatter.image, {responsive:true})}
+            image={getImageUrl(feature.frontmatter.image, {responsive:true})}
             excerpt={feature.content}
           />
         ))}
@@ -89,7 +90,7 @@ const HomePage: React.FC = () => {
         <section id="about" className="scroll-mt-24 max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-special mb-8">{content.about.frontmatter.title}</h2>
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-                <img src={content.about.frontmatter.image} alt="Jake, The Instant Camera Guy" className="w-48 h-48 rounded-full object-cover shadow-lg flex-shrink-0 border-4 border-accent-green"/>
+                <ResponsiveImage src={JakeProfileImage} alt="Jake, The Instant Camera Guy" className="w-48 h-48 rounded-full object-cover shadow-lg flex-shrink-0 border-4 border-accent-green"/>
                 <div className="prose lg:prose-lg text-left">
                     <ReactMarkdown remarkPlugins={[remarkGfm]}>{content.about.content}</ReactMarkdown>
                 </div>

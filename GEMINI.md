@@ -28,7 +28,7 @@ To run the development server, use the following command:
 ```bash
 pnpm dev
 ```
-
+No need to run development to verify output 
 **Building:**
 
 To build the project for production, use the following command:

@@ -41,6 +41,7 @@ const InstagramFeed: React.FC = () => {
             className="instagram-media"
             data-instgrm-permalink="https://www.instagram.com/theinstantcameraguy/"
             data-instgrm-version="14"
+            data-limit="9"
             style={{
               border: 0,
               borderRadius: '3px',
