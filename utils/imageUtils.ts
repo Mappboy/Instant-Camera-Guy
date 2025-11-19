@@ -1,4 +1,4 @@
-export function getImageUrl(name: string, options?: { responsive?: boolean }): { default: string } {
+export function getImageUrl(name: string, options?: { responsive?: boolean }):  string | any {
   if (!name) return { default: '' };
   if (name.startsWith('http://') || name.startsWith('https://')) {
     return { default: name };
@@ -22,12 +22,12 @@ export function getImageUrl(name: string, options?: { responsive?: boolean }): {
       return responsiveImages[responsiveImagePath];
     } else {
       // Fallback to non-responsive image if responsive not found, wrap in { default: ... }
-      return { default: getNonResponsiveImage() };
+      return getNonResponsiveImage();
     }
   }
 
   // Original logic for non-responsive images if responsive option is not set, wrap in { default: ... }
-  return { default: getNonResponsiveImage() };
+  return getNonResponsiveImage();
 }
 
 export function getImageUrlHref(name) {

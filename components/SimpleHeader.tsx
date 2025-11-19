@@ -1,6 +1,11 @@
 import React from 'react';
 
 const SimpleHeader: React.FC = () => {
+  const navItems = [
+    { name: 'Home', path: '/', color: 'text-accent-green' },
+    { name: 'Repairs', path: '/repairs', color: 'text-accent-red' },
+    { name: 'Videos', path: '/videos', color: 'text-accent-blue' },
+  ];
   return (
     <header className="bg-background/80 backdrop-blur-sm sticky top-0 z-10 shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -10,6 +15,19 @@ const SimpleHeader: React.FC = () => {
               The Instant 📷 Guy
             </a>
           </div>
+          <nav className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.path}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${item.color} hover:underline`}
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </nav>
         </div>
       </div>
     </header>

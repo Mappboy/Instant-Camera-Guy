@@ -5,7 +5,7 @@ const InstagramFeed: React.FC = () => {
     <div className="flex justify-center">
       <div className="igwrapper">
         <style>{`
-          .igwrapper { background: #fff; position: relative; }
+          .igwrapper { background: #fff; position: relative; min-height: 800px; }
           .igwrapper iframe { border: 0; position: relative; z-index: 2; }
           .igwrapper a { color: rgba(0,0,0,0); position: absolute; left: 0; top: 0; z-index: 0; }
         `}</style>

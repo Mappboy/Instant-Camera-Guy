@@ -9,10 +9,11 @@ import Layout from './components/Layout';
 
 const AppContent: React.FC = () => {
   const location = useLocation();
-  const isRepairPage = location.pathname === '/repair';
+  const isRepairPage = location.pathname === '/repairs';
+  const isVideosPage = location.pathname === '/videos';
 
   return (
-    <Layout simpleHeader={isRepairPage}>
+    <Layout simpleHeader={isRepairPage || isVideosPage}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/repair" element={<RepairsPage />} />
