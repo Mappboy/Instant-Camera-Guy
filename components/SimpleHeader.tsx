@@ -3,7 +3,7 @@ import React from 'react';
 const SimpleHeader: React.FC = () => {
   const navItems = [
     { name: 'Home', path: '/', color: 'text-accent-green' },
-    { name: 'Repairs', path: '/repairs', color: 'text-accent-red' },
+    { name: 'Repairs', path: '/repair', color: 'text-accent-red' },
     { name: 'Videos', path: '/videos', color: 'text-accent-blue' },
   ];
   return (

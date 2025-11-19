@@ -10,7 +10,7 @@ interface PolaroidCardProps {
 const PolaroidCard: React.FC<PolaroidCardProps> = ({ image, title, excerpt }) => {
   // Add a slight random rotation for a more organic feel
   const [rotation] = React.useState(Math.random() * 4 - 2);
-const isResponsiveImage = typeof image === 'object' && image !== null && 'src' in image;
+const isResponsiveImage = typeof image === 'object' && image !== null && 'imageTypes' in image;
   return (
     <div className="block group">
       <div
