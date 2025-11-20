@@ -9,7 +9,7 @@ import Layout from './components/Layout';
 
 const AppContent: React.FC = () => {
   const location = useLocation();
-  const isRepairPage = location.pathname === '/repairs';
+  const isRepairPage = location.pathname === '/repair';
   const isVideosPage = location.pathname === '/videos';
 
   return (

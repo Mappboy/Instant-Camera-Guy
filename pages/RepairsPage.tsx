@@ -14,7 +14,19 @@ const repairProcess = [
     title: 'Post Your Camera',
     description: 'Carefully package and post your camera to my Australian address. I will provide this upon contact.',
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2-2h8a1 1 0 001-1zM21 11V5a2 2 0 00-2-2H9a2 2 0 00-2 2v2" /></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+  <path d="M7 14V8a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v6" />
+  <circle cx="12" cy="11" r="2.5" />
+  <path d="M8 7V5h4v2" />
+  <path d="M15 10h1" />
+  <path d="M15 12h1" />
+
+  <path d="M3 14h18" />
+  <path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5" />
+
+  <path d="M3 14l-2-5" />
+  <path d="M21 14l2-5" />
+  <path d="M6 9h12" /></svg>
     ),
   },
   {
@@ -38,24 +50,19 @@ const repairProcess = [
 const commonRepairs = [
   {
     title: 'Polaroid SX-70',
-    description: 'The original and best. I can fix common motor, mirror, and electronic issues, perform 600 conversions, and reskin.',
+    description: 'The icon! I can fix just about anything on these! ',
     color: 'border-accent-red'
   },
   {
     title: 'Polaroid 600 Series',
-    description: 'From the Sun 660 to the Impulse AF. I fix flash issues, sticky rollers, and broken plastic casings.',
+    description: 'The classic plastic fantastic. I-Type conversion, broken flashes and exposure issues are common repairs on these models.',
     color: 'border-accent-teal'
   },
   {
-    title: 'Image/Spectra',
-    description: 'Often plagued by mirror and film ejection issues, I have the experience to get them working again.',
-    color: 'border-accent-green'
-  },
-  {
     title: 'Other Models',
-    description: 'Got something else? A Polaroid GO, a 1000 series, or something more obscure? Get in touch and I will see what I can do!',
-    color: 'border-accent-tan'
-  },
+    description: 'Got something else? Something custom or more obscure? Get in touch and I  will see what we can do!',
+    color: 'border-accent-green'
+  }
 ];
 
 const RepairsPage: React.FC = () => {
@@ -118,7 +125,7 @@ const RepairsPage: React.FC = () => {
         <section className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-special mb-8">Uncollected Cameras</h2>
             <div className="prose lg:prose-lg mx-auto bg-background p-8 sm:p-12 shadow-lg rounded-sm border-t-8 border-accent-red">
-                <p>Please note that repaired cameras must be picked up within 3 months of works being completed. Uncollected cameras will be sold on or scrapped for parts to recoup costs as per the Salvage Rights law.</p>
+                <p>Please note that repaired cameras must be picked up/paid for within 3 months of works being completed. Uncollected cameras will be sold on or scrapped for parts to recoup costs as per Australia Salvage Rights laws.</p>
             </div>
         </section>
 
@@ -134,7 +141,7 @@ const RepairsPage: React.FC = () => {
         <section className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-special mb-8">Warranty</h2>
             <div className="prose lg:prose-lg mx-auto bg-background p-8 sm:p-12 shadow-lg rounded-sm border-t-8 border-accent-teal">
-                <p>All cameras I sell come with a 6 month warranty for all services performed to the camera. Should it fail, simply send it back to me and I will repair it without extra cost. Exceptions are in cases of physical or water damage, dead integrated circuits, failed reduction gears in the gear-train and user error resulting in mangled pick-arms. In cases where one of the aforementioned fails, critical spare parts will be required at additional cost, but will be supplied as cheaply as possible.</p>
+                <p>All cameras I sell come with a 12 month warranty for all services performed to the camera. Should something from my servicing fail, simply send it back to me and I will repair it without extra cost. Exceptions would be cases of physical or water or sand damage, failure of original integrated circuits, failed reduction gears in the gear-train and user error resulting in mangled pick-arms or other critical failure. In cases where one of the aforementioned fails, critical spare parts will be required at additional cost, but will be supplied as cheaply as possible.</p>
             </div>
         </section>
         
@@ -142,13 +149,12 @@ const RepairsPage: React.FC = () => {
         <section id="contact-repair" className="scroll-mt-24 max-w-2xl mx-auto">
            <h2 className="text-4xl font-special mb-8 text-center">Ready to start?</h2>
            <div className="prose lg:prose-lg mx-auto bg-background p-8 sm:p-12 shadow-lg rounded-sm border-t-8 border-accent-teal">
-           <p>For the quickest response and a quote, please message us on Instagram or Facebook. You'll find my up-to-date price lists and see my latest work there. </p>
-           <p>Social media is my preferred method of contact due to the easy ability to send videos, photos and voice memos about your cameras repair process.</p>
-           <p>Please only email if you have no other option. Email is harder to share videos of your camera in action, and as a result I use email infrequently.</p>
+           <p>For the quickest response and a quote, please message us on Instagram. You'll find our up-to-date price lists and see our latest work there. Facebook is also great! </p>
+            <p>Please only email if this is your last option, as we use it less frequently.</p>
            <ul>
-            <li><strong>Preferred contact: Instagram</strong> <a href="https://www.instagram.com/theinstantcameraguy/" target="_blank" rel="noopener noreferrer">Message me on Instagram</a></li>
-            <li><strong>2nd Preference: Facebook:</strong> <a href="https://m.me/instantcameraguy" target="_blank" rel="noopener noreferrer">Message me on Facebook</a></li>
-            <li><strong>Email:</strong> <a href="mailto:theinstantcameraguy@hotmail.com">theinstantcameraguy@hotmail.com</a></li>
+            <li><strong>Instagram (Preferred):</strong> <a href="https://www.instagram.com/theinstantcameraguy/" target="_blank" rel="noopener noreferrer">Message me on Instagram</a></li>
+            <li><strong>Facebook:</strong> <a href="https://m.me/instantcameraguy" target="_blank" rel="noopener noreferrer">Message me on Facebook</a></li>
+            <li><strong>Email (Last Resort):</strong> <a href="mailto:theinstantcameraguy@hotmail.com">theinstantcameraguy@hotmail.com</a></li>
            </ul>
           </div>
         </section>
