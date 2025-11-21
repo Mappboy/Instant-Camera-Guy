@@ -54,7 +54,7 @@ const HomePage: React.FC = () => {
       {content.hero && (
         <section className="w-full">
           <div className="p-4 text-center">
-            <h1 className="text-8xl md:text-6xl sm:text-6xl font-medium text-primary tracking-tighter leading-[1.1]">
+            <h1 className="text-5xl md:text-6xl sm:text-5xl font-medium text-primary tracking-tighter leading-[1.1]">
               {content.hero.frontmatter.title}<span className="rainbow-text">instant cameras</span>
             </h1>
           </div>
