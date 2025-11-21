@@ -140,7 +140,7 @@ const RepairsPage: React.FC = () => {
         {/* Warranty Section */}
         <section className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-special mb-8">Warranty</h2>
-            <div className="prose lg:prose-lg mx-auto bg-background p-8 sm:p-12 shadow-lg rounded-sm border-t-8 border-accent-teal">
+            <div className="prose lg:prose-lg mx-auto bg-background p-8 sm:p-12 shadow-lg rounded-sm border-t-8 border-accent-orange">
                 <p>All cameras I sell come with a 12 month warranty for all services performed to the camera. Should something from my servicing fail, simply send it back to me and I will repair it without extra cost. Exceptions would be cases of physical or water or sand damage, failure of original integrated circuits, failed reduction gears in the gear-train and user error resulting in mangled pick-arms or other critical failure. In cases where one of the aforementioned fails, critical spare parts will be required at additional cost, but will be supplied as cheaply as possible.</p>
             </div>
         </section>
