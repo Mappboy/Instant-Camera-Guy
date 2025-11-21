@@ -8,7 +8,7 @@ import PolaroidCard from '../components/PolaroidCard';
 import InstagramFeed from '../components/InstagramFeed';
 import { getImageUrl, getImageUrlHref } from '../utils/imageUtils';
 import { ResponsiveImage } from '@responsive-image/react';
-import HeroImage from '../assets/images/sx_70.png?lqip=blurhashr&responsive';
+import HeroImage from '../assets/images/sx_70.png?lqip=blurhashr&format=original;webp;avif;png&quality=100&responsive';
 import JakeProfileImage from '../assets/images/jake_profile.jpg?lqip=blurhash&responsive';
 import YouTubeEmbed from '../components/YouTubeEmbed';
 
@@ -54,8 +54,8 @@ const HomePage: React.FC = () => {
       {content.hero && (
         <section className="w-full">
           <div className="p-4 text-center">
-            <h1 className="text-4xl md:text-6xl font-special leading-tight z-10">
-              {content.hero.frontmatter.title}
+            <h1 className="text-8xl md:text-7xl font-medium font-header font-extrabold text-primary tracking-tighter leading-[1.1]">
+              {content.hero.frontmatter.title}<span className="rainbow-text">instant cameras</span>
             </h1>
           </div>
           <div
@@ -66,9 +66,10 @@ const HomePage: React.FC = () => {
           >
             <ResponsiveImage src={HeroImage}
               alt="A vintage Polaroid SX-70 camera"
-              width={80}
+              width={50}
+              height={50}
               loading='eager'
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-3/4 h-3/4 object-cover mx-auto"
             />
           </div>
         </section>

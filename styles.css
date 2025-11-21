@@ -4,23 +4,40 @@ html {
   scroll-behavior: smooth;
 }
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'Source Serif 4';
   font-display: swap;
-  src: url(@fontsource-variable/montserrat/files/montserrat-latin-wght-normal.woff2) 
+  src: url(@fontsource-variable/source-serif-4/files/source-serif-4-latin-wght-normal.woff2) 
   format('woff2-variations');
 }
 @font-face {
-  font-family: 'Special Elite';
+  font-family: 'Inter';
   font-display: swap;
-  src: url(@fontsource/special-elite/files/special-elite-latin-400-normal.woff2) 
-  format('woff2');
+  src: url(@fontsource-variable/inter/files/inter-latin-wght-normal.woff2) 
+  format('woff2-variations');
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 .font-special {
-  font-family: 'Special Elite', cursive;
+  font-family: 'Inter', sans-serif;
+}
+
+.rainbow-text {
+  /* Define the colors and their hard stops */
+  background-image: linear-gradient(
+    to bottom,
+    #ff0000 0%, #ff0000 40%, /* Red */
+    #ff8c00 40%, #ff8c00 50%, /* Orange */
+    #ffd700 50%, #ffd700 60%, /* Yellow */
+    #228b22 60%, #228b22 70%, /* Green */
+    #1e90ff 70%, #1e90ff 100% /* Blue */
+  );
+  /* Standard background clipping for text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Make the text color itself transparent so the background shows through */
+  color: transparent;
 }
 
 @theme {
@@ -53,7 +70,7 @@ body {
   ============================================================
   */
   --font-sans: 'Montserrat', sans-serif;
-  --font-special: '"Special Elite"', cursive;
+  --font-special: '"Inter"', sans-serif;
   /* Note: The 'Inter' font from your old CSS is overridden by 'Montserrat' */
 
   /*
