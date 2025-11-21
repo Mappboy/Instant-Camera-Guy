@@ -54,7 +54,7 @@ const HomePage: React.FC = () => {
       {content.hero && (
         <section className="w-full">
           <div className="p-4 text-center">
-            <h1 className="text-8xl md:text-6xl sm:text-6xl font-medium font-header font-extrabold text-primary tracking-tighter leading-[1.1]">
+            <h1 className="text-8xl md:text-6xl sm:text-6xl font-medium text-primary tracking-tighter leading-[1.1]">
               {content.hero.frontmatter.title}<span className="rainbow-text">instant cameras</span>
             </h1>
           </div>
@@ -69,7 +69,7 @@ const HomePage: React.FC = () => {
               width={50}
               height={50}
               loading='eager'
-              className="absolute inset-0 w-3/4 h-3/4 object-cover mx-auto"
+              className="absolute inset-0 w-full h-full lg:w-3/4 lg:h-3/4 object-cover mx-auto"
             />
           </div>
         </section>
