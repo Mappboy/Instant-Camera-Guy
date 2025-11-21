@@ -25,7 +25,7 @@ const HomePage: React.FC = () => {
   useEffect(() => {
     const fetchContent = async () => {
       setLoading(true);
-      const slugs = ['hero', 'about', 'repairs','photos', 'contact', 'more-to-come'];
+      const slugs = ['hero', 'about', 'repairs','photos', 'contact'];
       const promises = slugs.map(slug => contentService.getContent(slug));
       const results = await Promise.all(promises);
       const contentMap: Record<string, ContentPiece> = {};
@@ -127,7 +127,7 @@ const HomePage: React.FC = () => {
                 href="https://www.instagram.com/theinstantcameraguy/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-block bg-accent-teal text-background font-bold py-3 px-8 rounded-sm shadow-lg hover:bg-accent-teal/90 transition-colors"
+                className="mt-4 inline-block bg-accent-tan text-background font-bold py-3 px-8 rounded-sm shadow-lg hover:bg-accent-teal/90 transition-colors"
             >
                 Follow on Instagram
             </a>

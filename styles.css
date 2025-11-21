@@ -36,14 +36,16 @@ body {
   --color-accent-teal: rgb(10, 95, 110);   /* #0A5F6E */
   --color-accent-tan: rgb(214, 200, 167);  /* #D6C8A7 */
   --color-accent-green: rgb(90, 110, 75);  /* #5A6E4B */
+  --color-accent-blue: rgb(59, 89, 152);   /* #3B5998 */
+  --color-accent-orange: rgb(220, 100, 40); /* #DC6428 */
   /*
   ============================================================
   2. Colors from your old example CSS
      (Renamed to avoid conflict with 'primary' above)
   ============================================================
   */
-  --color-brand-primary: 99 102 241;   /* #6366f1 */
-  --color-brand-secondary: 236 72 153; /* #ec4899 */
+  --color-brand-primary: rgb(99, 102, 241);   /* #6366f1 */
+  --color-brand-secondary: rgb(236, 72, 153); /* #ec4899 */
 
   /*
   ============================================================
