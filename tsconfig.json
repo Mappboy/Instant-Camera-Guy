@@ -9,6 +9,7 @@
       "DOM",
       "DOM.Iterable"
     ],
+    "files": [ "global.d.ts" ],
     "skipLibCheck": true,
     "types": [
       "node",

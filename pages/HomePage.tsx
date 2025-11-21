@@ -67,6 +67,7 @@ const HomePage: React.FC = () => {
             <ResponsiveImage src={HeroImage}
               alt="A vintage Polaroid SX-70 camera"
               width={80}
+              loading='eager'
               className="absolute inset-0 w-full h-full object-cover"
             />
           </div>
@@ -127,7 +128,7 @@ const HomePage: React.FC = () => {
                 href="https://www.instagram.com/theinstantcameraguy/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-block bg-accent-tan text-background font-bold py-3 px-8 rounded-sm shadow-lg hover:bg-accent-teal/90 transition-colors"
+                className="mt-4 inline-block bg-accent-orange text-background font-bold py-3 px-8 rounded-sm shadow-lg hover:bg-accent-teal/90 transition-colors"
             >
                 Follow on Instagram
             </a>
