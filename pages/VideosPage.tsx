@@ -13,6 +13,10 @@ const videos = [
   {
     "title": "An example of one of my refurbs",
     "id": "SayrMGyGum0"
+  },
+  {
+    "title": "No Upgrades Without an Overhaul: Why servicing the SX-70 is so important.",
+    "id": "PEMsFa5q32g"
   }
 ];
 
