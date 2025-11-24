@@ -15,7 +15,7 @@ const videos = [
     "id": "SayrMGyGum0"
   },
   {
-    "title": "No Upgrades Without an Overhaul: Why servicing the SX-70 is so important.",
+    "title": "No Upgrades Without an Overhaul",
     "id": "PEMsFa5q32g"
   }
 ];
