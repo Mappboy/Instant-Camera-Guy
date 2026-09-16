@@ -3,35 +3,50 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { contentService } from '../services/contentService';
 import type { ContentPiece } from '../types';
+import LoadingSpinner from '../components/LoadingSpinner';
 import PolaroidCard from '../components/PolaroidCard';
 import InstagramFeed from '../components/InstagramFeed';
-import { getImageUrl } from '../utils/imageUtils';
+import { getImageUrl, getImageUrlHref } from '../utils/imageUtils';
 import { ResponsiveImage } from '@responsive-image/react';
-import HeroImage from '../assets/images/sx_70.png?lqip=blurhash&format=avif;webp;png&quality=80&responsive';
-import JakeProfileImage from '../assets/images/jake_profile.jpg?lqip=blurhash&quality=80&responsive';
+import HeroImage from '../assets/images/sx_70.png?lqip=blurhashr&format=original;webp;avif;png&quality=100&responsive';
+import JakeProfileImage from '../assets/images/jake_profile.jpg?lqip=blurhash&responsive';
 import YouTubeEmbed from '../components/YouTubeEmbed';
 
-const SLUGS = ['hero', 'about', 'repairs', 'photos', 'contact'];
-
-const getInitialContent = (): Record<string, ContentPiece> => {
-  const contentMap: Record<string, ContentPiece> = {};
-  for (const slug of SLUGS) {
-    const piece = contentService.getContentSync(slug);
-    if (piece) {
-      contentMap[slug] = piece;
-    }
-  }
-  return contentMap;
-};
-
 const HomePage: React.FC = () => {
-  const [content] = useState<Record<string, ContentPiece>>(getInitialContent);
-  const [features] = useState<ContentPiece[]>(() => contentService.getFeaturesSync());
+  const [content, setContent] = useState<Record<string, ContentPiece>>({});
+  const [features, setFeatures] = useState<ContentPiece[]>([]);
+  const [loading, setLoading] = useState(true);
 
   const featuredVideo = {
     "title": "The SX-70R PCB",
     "id": "eTm0L0xm6Cc"
   };
+
+  useEffect(() => {
+    const fetchContent = async () => {
+      setLoading(true);
+      const slugs = ['hero', 'about', 'repairs','photos', 'contact'];
+      const promises = slugs.map(slug => contentService.getContent(slug));
+      const results = await Promise.all(promises);
+      const contentMap: Record<string, ContentPiece> = {};
+      results.forEach((piece, index) => {
+        if (piece) {
+          contentMap[slugs[index]] = piece;
+        }
+      });
+      setContent(contentMap);
+      
+      const featureResults = await contentService.getFeatures();
+      setFeatures(featureResults);
+
+      setLoading(false);
+    };
+    fetchContent();
+  }, []);
+
+  if (loading) {
+    return <LoadingSpinner />;
+  }
 
   return (
     <div className="flex flex-col gap-16 sm:gap-24 md:gap-32">
@@ -44,19 +59,17 @@ const HomePage: React.FC = () => {
             </h1>
           </div>
           <div
-            className="relative w-full max-w-4xl mx-auto"
+            className="relative w-full"
             style={{
-              paddingTop: '66.67%', // 3:2 Aspect Ratio matching sx_70.png (3888x2592)
+              paddingTop: '70%', // 16:9 Aspect Ratio
             }}
           >
-            <ResponsiveImage
-              src={HeroImage}
+            <ResponsiveImage src={HeroImage}
               alt="A vintage Polaroid SX-70 camera"
-              loading="eager"
-              fetchPriority="high"
-              size={100}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 900px"
-              className="absolute inset-0 w-full h-full lg:w-3/4 lg:h-3/4 object-contain mx-auto"
+              width={50}
+              height={50}
+              loading='eager'
+              className="absolute inset-0 w-full h-full lg:w-3/4 lg:h-3/4 object-cover mx-auto"
             />
           </div>
         </section>
@@ -79,13 +92,7 @@ const HomePage: React.FC = () => {
         <section id="about" className="scroll-mt-24 max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-special mb-8">{content.about.frontmatter.title}</h2>
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-                <ResponsiveImage
-                  src={JakeProfileImage}
-                  alt="Jake, The Instant Camera Guy"
-                  loading="lazy"
-                  decoding="async"
-                  className="w-48 h-48 rounded-full object-cover shadow-lg flex-shrink-0 border-4 border-accent-green"
-                />
+                <ResponsiveImage src={JakeProfileImage} alt="Jake, The Instant Camera Guy" className="w-48 h-48 rounded-full object-cover shadow-lg flex-shrink-0 border-4 border-accent-green"/>
                 <div className="prose lg:prose-lg text-left">
                     <ReactMarkdown remarkPlugins={[remarkGfm]}>{content.about.content}</ReactMarkdown>
                 </div>
@@ -112,11 +119,8 @@ const HomePage: React.FC = () => {
       <section id="instagram" className="scroll-mt-24">
         <div className="text-center">
             <h2 className="text-4xl font-special mb-4">Follow My Journey</h2>
-            <p className="max-w-2xl mx-auto text-primary/80 mb-2">
+            <p className="max-w-2xl mx-auto text-primary/80 mb-8">
                 Check out my latest repairs, custom mods, and favorite instant shots on Instagram. It's the best place to see what I'm up to!
-            </p>
-            <p className="max-w-2xl mx-auto text-primary/70 text-sm mb-8">
-                Please read through the highlights section and top posts for all information regarding pricing, products and warranty etc.
             </p>
         </div>
         <InstagramFeed />

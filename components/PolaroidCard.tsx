@@ -22,9 +22,6 @@ const isResponsiveImage = typeof image === 'object' && image !== null && 'imageT
                 <ResponsiveImage
                     src={image}
                     alt={title}
-                    loading="lazy"
-                    decoding="async"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="w-full h-auto object-cover aspect-square"
                 />
             ) : (
@@ -32,8 +29,6 @@ const isResponsiveImage = typeof image === 'object' && image !== null && 'imageT
                 <img 
                     src={image}
                     alt={title}
-                    loading="lazy"
-                    decoding="async"
                     className="w-full h-auto object-cover aspect-square"
                 />
             )}

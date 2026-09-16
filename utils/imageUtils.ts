@@ -6,32 +6,27 @@ export function getImageUrl(name: string, options?: { responsive?: boolean }):  
 
   // Logic to get a non-responsive image
   const getNonResponsiveImage = () => {
-    const images = import.meta.glob('/assets/images/*.{jpg,jpeg,png,svg}', { eager: true, import: 'default' });
+    const images = import.meta.glob('/assets/images/**', { eager: true, import: 'default' });
     const imagePath = Object.keys(images).find(path => path.endsWith(name));
     return imagePath ? (images[imagePath] as string) : '';
   };
 
   if (options?.responsive) {
-    const responsiveImages = import.meta.glob(['/assets/images/*.jpg', '/assets/images/*.jpeg'], {
-      eager: true,
-      import: 'default',
-      query: {
-        responsive: true,
-        lqip: 'blurhash',
-        quality: 80,
-      }
-    });
+    const responsiveImages = import.meta.glob('/assets/images/**', { eager: true,  import: 'default', query: {
+      responsive: true,
+      lqip: 'blurhash'
+    } });
     const responsiveImagePath = Object.keys(responsiveImages).find(path => path.includes(name));
 
     if (responsiveImagePath) {
       return responsiveImages[responsiveImagePath];
     } else {
-      // Fallback to non-responsive image if responsive not found
+      // Fallback to non-responsive image if responsive not found, wrap in { default: ... }
       return getNonResponsiveImage();
     }
   }
 
-  // Original logic for non-responsive images if responsive option is not set
+  // Original logic for non-responsive images if responsive option is not set, wrap in { default: ... }
   return getNonResponsiveImage();
 }
 

@@ -1,13 +1,11 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import HomePage from './pages/HomePage';
+import RepairsPage from './pages/RepairsPage';
+import ListPage from './pages/ListPage';
+import PostPage from './pages/PostPage';
+import VideosPage from './pages/VideosPage';
 import Layout from './components/Layout';
-import LoadingSpinner from './components/LoadingSpinner';
-
-const RepairsPage = lazy(() => import('./pages/RepairsPage'));
-const ListPage = lazy(() => import('./pages/ListPage'));
-const PostPage = lazy(() => import('./pages/PostPage'));
-const VideosPage = lazy(() => import('./pages/VideosPage'));
 
 const AppContent: React.FC = () => {
   const location = useLocation();
@@ -16,15 +14,13 @@ const AppContent: React.FC = () => {
 
   return (
     <Layout simpleHeader={isRepairPage || isVideosPage}>
-      <Suspense fallback={<LoadingSpinner />}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/repair" element={<RepairsPage />} />
-          <Route path="/videos" element={<VideosPage />} />
-          <Route path="/:category" element={<ListPage />} />
-          <Route path="/:category/:slug" element={<PostPage />} />
-        </Routes>
-      </Suspense>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/repair" element={<RepairsPage />} />
+        <Route path="/videos" element={<VideosPage />} />
+        <Route path="/:category" element={<ListPage />} />
+        <Route path="/:category/:slug" element={<PostPage />} />
+      </Routes>
     </Layout>
   );
 };
