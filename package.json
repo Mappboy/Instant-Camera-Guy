@@ -15,7 +15,6 @@
     "@fontsource/special-elite": "^5.2.8",
     "@responsive-image/react": "^1.1.5",
     "@tailwindcss/vite": "^4.1.16",
-    "pnpm": "^10.22.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-markdown": "^10.1.0",

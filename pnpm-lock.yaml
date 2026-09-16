@@ -26,9 +26,6 @@ importers:
       '@tailwindcss/vite':
         specifier: ^4.1.16
         version: 4.1.16(vite@6.4.1(@types/node@22.18.13)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.51.2))
-      pnpm:
-        specifier: ^10.22.0
-        version: 10.22.0
       react:
         specifier: ^19.2.0
         version: 19.2.0
@@ -2337,11 +2334,6 @@ packages:
   picomatch@4.0.7:
     resolution: {integrity: sha512-qcJu88Q2IWqJsDD529JKMdwGm/dvInW4HvQnRwiH9JtihJvzGOscDtHE3x1pBKeUOTysQ8kVmLnJ2kJu7yhcGA==}
     engines: {node: '>=12'}
-
-  pnpm@10.22.0:
-    resolution: {integrity: sha512-vwSe/plbKPUn/StBrgR0zikYb37cs79UUIe9Yfu+uyv3U2LRMH/aCcLSiOHkmXh6wS1Py2F6l0cYpgUfLu50HA==}
-    engines: {node: '>=18.12'}
-    hasBin: true
 
   possible-typed-array-names@1.1.0:
     resolution: {integrity: sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg==}
@@ -5450,8 +5442,6 @@ snapshots:
   picomatch@4.0.3: {}
 
   picomatch@4.0.7: {}
-
-  pnpm@10.22.0: {}
 
   possible-typed-array-names@1.1.0: {}
 
