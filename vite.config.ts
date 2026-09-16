@@ -19,6 +19,7 @@ export default defineConfig(({ mode }) => {
         tailwindcss(),
         VitePWA({
           registerType: 'autoUpdate',
+          injectRegister: 'script-defer',
           includeAssets: [
             'favicon.ico',
             'favicon.svg',
@@ -60,6 +61,7 @@ export default defineConfig(({ mode }) => {
           output: {
             manualChunks: {
               'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+              'vendor-markdown': ['react-markdown', 'remark-gfm'],
             },
           },
         },

@@ -1,52 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { contentService } from '../services/contentService';
 import type { ContentPiece } from '../types';
-import LoadingSpinner from '../components/LoadingSpinner';
 import PolaroidCard from '../components/PolaroidCard';
 import InstagramFeed from '../components/InstagramFeed';
 import { getImageUrl, getImageUrlHref } from '../utils/imageUtils';
 import { ResponsiveImage } from '@responsive-image/react';
-import HeroImage from '../assets/images/sx_70.png?lqip=blurhashr&format=original;webp;avif;png&quality=100&responsive';
+import HeroImage from '../assets/images/sx_70.png?lqip=blurhashr&format=avif;webp;png&quality=85&responsive';
 import JakeProfileImage from '../assets/images/jake_profile.jpg?lqip=blurhash&responsive';
 import YouTubeEmbed from '../components/YouTubeEmbed';
 
+const initialSlugs = ['hero', 'about', 'repairs', 'photos', 'contact'];
+const getInitialContent = (): Record<string, ContentPiece> => {
+  const contentMap: Record<string, ContentPiece> = {};
+  for (const slug of initialSlugs) {
+    const piece = contentService.getContentSync(slug);
+    if (piece) {
+      contentMap[slug] = piece;
+    }
+  }
+  return contentMap;
+};
+
 const HomePage: React.FC = () => {
-  const [content, setContent] = useState<Record<string, ContentPiece>>({});
-  const [features, setFeatures] = useState<ContentPiece[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [content] = useState<Record<string, ContentPiece>>(getInitialContent);
+  const [features] = useState<ContentPiece[]>(() => contentService.getFeaturesSync());
 
   const featuredVideo = {
     "title": "The SX-70R PCB",
     "id": "eTm0L0xm6Cc"
   };
-
-  useEffect(() => {
-    const fetchContent = async () => {
-      setLoading(true);
-      const slugs = ['hero', 'about', 'repairs','photos', 'contact'];
-      const promises = slugs.map(slug => contentService.getContent(slug));
-      const results = await Promise.all(promises);
-      const contentMap: Record<string, ContentPiece> = {};
-      results.forEach((piece, index) => {
-        if (piece) {
-          contentMap[slugs[index]] = piece;
-        }
-      });
-      setContent(contentMap);
-      
-      const featureResults = await contentService.getFeatures();
-      setFeatures(featureResults);
-
-      setLoading(false);
-    };
-    fetchContent();
-  }, []);
-
-  if (loading) {
-    return <LoadingSpinner />;
-  }
 
   return (
     <div className="flex flex-col gap-16 sm:gap-24 md:gap-32">
@@ -70,6 +54,7 @@ const HomePage: React.FC = () => {
               height={50}
               loading='eager'
               fetchPriority='high'
+              decoding='sync'
               className="absolute inset-0 w-full h-full lg:w-3/4 lg:h-3/4 object-cover mx-auto"
             />
           </div>
@@ -77,7 +62,8 @@ const HomePage: React.FC = () => {
       )}
 
       {/* Features Section */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12" aria-label="Features and Services">
+        <h2 className="sr-only">Features and Services</h2>
         {features.map((feature) => (
           <PolaroidCard
             key={feature.frontmatter.slug}

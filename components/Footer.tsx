@@ -3,7 +3,7 @@ import React from 'react';
 const Footer: React.FC = () => {
   return (
     <footer className="bg-background/50 mt-16">
-      <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center text-primary/70">
+      <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center text-primary">
         <div className="flex justify-center space-x-6 mb-4">
             <a href="https://www.instagram.com/theinstantcameraguy/" target="_blank" rel="noopener noreferrer" className="hover:text-accent-tan">Instagram</a>
             <a href="https://m.me/instantcameraguy" target="_blank" rel="noopener noreferrer" className="hover:text-accent-teal">Facebook</a>
