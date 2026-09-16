@@ -150,11 +150,16 @@ const RepairsPage: React.FC = () => {
            <h2 className="text-4xl font-special mb-8 text-center">Ready to start?</h2>
            <div className="prose lg:prose-lg mx-auto bg-background p-8 sm:p-12 shadow-lg rounded-sm border-t-8 border-accent-teal">
            <p>For the quickest response and a quote, please message us on Instagram. You'll find our up-to-date price lists and see our latest work there. Facebook is also great! </p>
-            <p>Please only email if this is your last option, as we use it less frequently.</p>
            <ul>
-            <li><strong>Instagram (Preferred):</strong> <a href="https://www.instagram.com/theinstantcameraguy/" target="_blank" rel="noopener noreferrer">Message me on Instagram</a></li>
+            <li>
+              <strong>Instagram (Preferred):</strong> <a href="https://www.instagram.com/theinstantcameraguy/" target="_blank" rel="noopener noreferrer">Message me on Instagram</a>
+              <p className="text-sm mt-1 text-primary/80">Please read through the highlights section and top posts for all information regarding pricing, products and warranty etc.</p>
+            </li>
             <li><strong>Facebook:</strong> <a href="https://m.me/instantcameraguy" target="_blank" rel="noopener noreferrer">Message me on Facebook</a></li>
-            <li><strong>Email (Last Resort):</strong> <a href="mailto:theinstantcameraguy@hotmail.com">theinstantcameraguy@hotmail.com</a></li>
+            <li>
+              <strong>Email:</strong> <a href="mailto:theinstantcameraguy@hotmail.com">theinstantcameraguy@hotmail.com</a>
+              <p className="text-sm mt-1 text-primary/80">Email for promotional and collaborative enquiries only. For all sales communication, pricing and enquiries please use Instagram.</p>
+            </li>
            </ul>
           </div>
         </section>
