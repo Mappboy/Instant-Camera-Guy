@@ -69,6 +69,7 @@ const HomePage: React.FC = () => {
               width={50}
               height={50}
               loading='eager'
+              fetchPriority='high'
               className="absolute inset-0 w-full h-full lg:w-3/4 lg:h-3/4 object-cover mx-auto"
             />
           </div>

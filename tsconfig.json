@@ -9,11 +9,10 @@
       "DOM",
       "DOM.Iterable"
     ],
-    "files": [ "global.d.ts" ],
     "skipLibCheck": true,
     "types": [
       "node",
-      "vite/client",
+      "vite/client"
     ],
     "moduleResolution": "bundler",
     "isolatedModules": true,
@@ -27,5 +26,10 @@
     },
     "allowImportingTsExtensions": true,
     "noEmit": true
-  }
+  },
+  "include": [
+    "global.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }
