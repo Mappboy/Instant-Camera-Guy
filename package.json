@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check:links": "node scripts/check-links.js",
+    "check:content": "node scripts/check-content.js",
+    "validate": "node scripts/validate-data.js",
+    "validate:all": "node scripts/validate-data.js && node scripts/check-content.js && node scripts/check-links.js"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.8",
