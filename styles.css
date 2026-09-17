@@ -54,7 +54,7 @@ body {
   --color-accent-tan: rgb(214, 200, 167);  /* #D6C8A7 */
   --color-accent-green: rgb(90, 110, 75);  /* #5A6E4B */
   --color-accent-blue: rgb(59, 89, 152);   /* #3B5998 */
-  --color-accent-orange: rgb(220, 100, 40); /* #DC6428 */
+  --color-accent-orange: rgb(194, 76, 20); /* #C24C14 - WCAG AA accessible against #FDFDF8 */
   /*
   ============================================================
   2. Colors from your old example CSS
