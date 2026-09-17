@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
             <a href="https://m.me/instantcameraguy" target="_blank" rel="noopener noreferrer" className="hover:text-accent-teal">Facebook</a>
             <a href="mailto:theinstantcameraguy@hotmail.com" className="hover:text-accent-red">Email</a>
         </div>
-        <p className="text-sm"><a href="http://www.abr.business.gov.au/SearchByAbn.aspx?abn=93161449237" target="_blank" rel="noopener noreferrer" className="hover:text-accent-green">ABN: 93 161 449 237</a></p>
+        <p className="text-sm"><a href="https://abr.business.gov.au/ABN/View?id=93161449237" target="_blank" rel="noopener noreferrer" className="hover:text-accent-green">ABN: 93 161 449 237</a></p>
         <p className="text-xs mt-4">
           &copy; {new Date().getFullYear()} The Instant Camera Guy.
         </p>
